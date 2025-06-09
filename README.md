@@ -1,7 +1,7 @@
 
 # OpenCV 物件偵測 Final Project
 
-## 🧠 專案說明
+## 專案說明
 
 本專案利用 OpenCV 的 Haar Cascades 方法進行物件偵測訓練。目標是透過自行標記的影像資料，建立可偵測指定物件的分類器模型。
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 🗂 專案結構
+## 專案結構
 
 ```
 finalproject/
@@ -25,15 +25,15 @@ finalproject/
 
 ---
 
-## 🛠 工具與版本
+## 工具與版本
 
-- Python 3.x
-- OpenCV 4.x
+- Python 3.13.2
+- OpenCV 4.11.0
 - 作業系統：Windows 10（PowerShell 環境）
 
 ---
 
-## 📸 資料來源
+## 資料來源
 
 - **正樣本**：手動標記的目標物圖像，共 129 張。
 - **負樣本**：無目標物的背景圖像，共 254 張。
@@ -41,14 +41,14 @@ finalproject/
 
 ---
 
-## 🔧 訓練流程
+## 訓練流程
 
-### 1️⃣ 建立 `.vec` 檔：
+### 建立 `.vec` 檔：
 ```bash
 opencv_createsamples -info positives.txt -vec positives.vec -num 129 -w 24 -h 24
 ```
 
-### 2️⃣ 開始訓練：
+### 開始訓練：
 ```bash
 opencv_traincascade -data data -vec positives.vec -bg negative.txt -numPos 110 -numNeg 254 -numStages 10 -w 24 -h 24
 ```
@@ -57,7 +57,7 @@ opencv_traincascade -data data -vec positives.vec -bg negative.txt -numPos 110 -
 
 ---
 
-## 🧪 推論與測試程式
+## 推論與測試程式
 
 ```python
 import cv2
@@ -84,7 +84,7 @@ cv2.destroyAllWindows()
 
 ---
 
-## ⚠️ 備註與限制
+## 備註與限制
 
 由於開發環境限制，在 PowerShell 執行 `cv2.imshow()` 時未能成功顯示圖像視窗。但模型訓練與推論邏輯皆已完成並測試無錯誤。
 
@@ -92,7 +92,7 @@ cv2.destroyAllWindows()
 
 ---
 
-## ✅ 完成項目摘要
+## 完成項目摘要
 
 - [x] 正負樣本整理
 - [x] `positive.vec` 產生成功
@@ -103,7 +103,7 @@ cv2.destroyAllWindows()
 
 ---
 
-## 🗨 心得與反思
+## 心得與反思
 
 在本次專案中，深刻體會到樣本品質與數量對訓練結果的重要性。OpenCV 的 cascade 訓練工具對新手相對友好，但對資料格式與流程的要求極高。
 
