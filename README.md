@@ -29,7 +29,7 @@ finalproject/
 
 - Python 3.13.2
 - OpenCV 4.11.0
-- 作業系統：Windows 10（PowerShell 環境）
+- 作業系統：Windows 11（PowerShell 環境）
 
 ---
 
